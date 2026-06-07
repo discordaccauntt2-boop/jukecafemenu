@@ -64,6 +64,7 @@
       border: 2px solid var(--accent);
       border-radius: 30px;
       font-size: 16px;
+      outline: none;
     }
 
     .tabs {
@@ -207,9 +208,9 @@
   <!-- Популярне -->
   <div class="category active" id="popular">
     <div class="category-title">🔥 Популярне</div>
-    <div class="item"><span class="name">Крильця Crispy 6 шт.</span><span class="price">200 грн</span><span class="hit">ХІТ</span><button onclick="addToCart('Крильця Crispy 6 шт.', 200)">Додати</button></div>
-    <div class="item"><span class="name">Сет Філадельфія Максі</span><span class="price">970 грн</span><span class="hit">ХІТ</span><button onclick="addToCart('Сет Філадельфія Максі 40 шт.', 970)">Додати</button></div>
-    <div class="item"><span class="name">Піца Баварська</span><span class="price">180 грн</span><span class="hit">ХІТ</span><button onclick="addToCart('Піца Баварська', 180)">Додати</button></div>
+    <div class="item"><span class="name">Крильця Crispy 6 шт.</span><span class="price">200 грн</span><span class="hit">ХІТ</span></div>
+    <div class="item"><span class="name">Сет Філадельфія Максі 40 шт.</span><span class="price">970 грн</span><span class="hit">ХІТ</span></div>
+    <div class="item"><span class="name">Піца Баварська</span><span class="price">180 грн</span><span class="hit">ХІТ</span></div>
   </div>
 
   <!-- ФРИТЮР -->
@@ -441,7 +442,7 @@
       closeCart();
     }
 
-    // Ініціалізація вкладок
+    // Ініціалізація табов
     document.getElementById('tabs').innerHTML = `
       <div class="tab active" data-tab="popular">🔥 Популярне</div>
       <div class="tab" data-tab="fritur">🍟 Фритюр</div>
