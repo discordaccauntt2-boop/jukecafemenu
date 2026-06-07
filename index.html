@@ -25,7 +25,7 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      transition: background 0.4s;
+      transition: background 0.5s;
     }
     .header {
       background: linear-gradient(135deg, #ff6b9d, #c44569);
@@ -101,7 +101,7 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      animation: fadeInUp 0.6s ease forwards;
+      animation: fadeInUp 0.7s ease forwards;
     }
     .category.active { display: block; }
     .category-title {
@@ -124,6 +124,11 @@
       justify-content: space-between;
       align-items: center;
       position: relative;
+      transition: all 0.4s ease;
+    }
+    .item:hover {
+      background: #fff0f5;
+      transform: translateX(12px);
     }
     .hit {
       position: absolute;
@@ -135,6 +140,7 @@
       padding: 2px 8px;
       border-radius: 12px;
       font-weight: bold;
+      animation: pulse 2s infinite;
     }
     .name { font-weight: 600; flex: 1; }
     .price { color: #e74c3c; font-weight: 700; margin-right: 12px; }
@@ -145,6 +151,10 @@
       padding: 9px 18px;
       border-radius: 25px;
       cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover {
+      transform: scale(1.12);
     }
 
     .cart-icon {
@@ -163,6 +173,10 @@
       box-shadow: 0 5px 20px rgba(255,107,157,0.4);
       z-index: 1000;
       cursor: pointer;
+      transition: all 0.3s;
+    }
+    .cart-icon:hover {
+      transform: scale(1.15) rotate(12deg);
     }
 
     .added-toast {
@@ -181,8 +195,12 @@
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
   </style>
 </head>
@@ -207,7 +225,7 @@
     <div class="item"><span class="name">Піца Баварська</span><span class="price">180 грн</span><span class="hit">ХІТ</span><button onclick="addToCart('Піца Баварська', 180)">Додати</button></div>
   </div>
 
-  <!-- ФРИТЮР (повний) -->
+  <!-- ФРИТЮР -->
   <div class="category" id="fritur">
     <div class="category-title">🍟 Фритюр</div>
     <img src="fritur.png" alt="Фритюр">
@@ -244,7 +262,7 @@
     <div class="item"><span class="name">Сет "Бургер & Ролл" 24 шт.</span><span class="price">1200 грн</span><button onclick="addToCart('Сет Бургер & Ролл 24 шт.', 1200)">Додати</button></div>
   </div>
 
-  <!-- ПІЦА (14 позицій) -->
+  <!-- ПІЦА -->
   <div class="category" id="pizza">
     <div class="category-title">🍕 Піца</div>
     <img src="pizza.png" alt="Піца">
