@@ -236,9 +236,12 @@
     <div class="item"><span class="name">Мілкшейк Фісташка</span><span class="price">150 грн</span><button onclick="addToCart('Мілкшейк Фісташка', 150)">Додати</button></div>
   </div>
 
-  <!-- АЙС-ЛАТТЕ -->
+  <!-- АЙС-ЛАТТЕ (оновлено) -->
   <div class="category" id="ice_latte">
     <div class="category-title">🥛 Айс-латте</div>
+    <div class="item"><span class="name">Шоколадне Печиво</span><span class="price">100 грн</span><button onclick="addToCart('Айс-латте Шоколадне Печиво', 100)">Додати</button></div>
+    <div class="item"><span class="name">Брауні</span><span class="price">100 грн</span><button onclick="addToCart('Айс-латте Брауні', 100)">Додати</button></div>
+    <div class="item"><span class="name">Карамель</span><span class="price">100 грн</span><button onclick="addToCart('Айс-латте Карамель', 100)">Додати</button></div>
     <div class="item"><span class="name">Irish Cream</span><span class="price">100 грн</span><button onclick="addToCart('Irish Cream Айс-латте', 100)">Додати</button></div>
     <div class="item"><span class="name">Bounty</span><span class="price">100 грн</span><button onclick="addToCart('Bounty Айс-латте', 100)">Додати</button></div>
     <div class="item"><span class="name">Snickers</span><span class="price">100 грн</span><button onclick="addToCart('Snickers Айс-латте', 100)">Додати</button></div>
@@ -248,6 +251,8 @@
   <div class="category" id="bubble">
     <div class="category-title">🧋 Бабл-лимонади</div>
     
+    <div class="item"><span class="name">Бабл Латте Карамель 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Латте Карамель 500 мл', 150)">Додати</button></div>
+
     <div class="item"><span class="name">Бабл Лимонад Полуниця 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Полуниця 500 мл', 150)">Додати</button></div>
     <div class="item"><span class="name">Бабл Лимонад Полуниця 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Полуниця 400 мл', 130)">Додати</button></div>
     <div class="item"><span class="name">Бабл Лимонад Полуниця 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Полуниця 300 мл', 100)">Додати</button></div>
@@ -275,8 +280,6 @@
     <div class="item"><span class="name">Бабл Лимонад Мультифрукт 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Мультифрукт 500 мл', 150)">Додати</button></div>
     <div class="item"><span class="name">Бабл Лимонад Мультифрукт 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Мультифрукт 400 мл', 130)">Додати</button></div>
     <div class="item"><span class="name">Бабл Лимонад Мультифрукт 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Мультифрукт 300 мл', 100)">Додати</button></div>
-
-    <div class="item"><span class="name">Бабл Латте Карамель 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Латте Карамель 500 мл', 150)">Додати</button></div>
   </div>
 
   <!-- БУРГЕРИ -->
@@ -384,7 +387,7 @@
       closeCart();
     }
 
-    // Ініціалізація табів
+    // Табы
     document.getElementById('tabs').innerHTML = `
       <div class="tab active" data-tab="popular">🔥 Популярне</div>
       <div class="tab" data-tab="fritur">🍟 Фритюр</div>
