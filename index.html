@@ -23,6 +23,12 @@
       justify-content: center;
       text-align: center;
       color: white;
+      animation: heroFade 1.8s ease;
+    }
+
+    @keyframes heroFade {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     .hero h1 { font-size: 48px; margin: 0 0 8px 0; text-shadow: 0 4px 20px rgba(0,0,0,0.85); }
@@ -40,55 +46,41 @@
     }
 
     .search-container { padding: 10px 15px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    #search { width: 100%; padding: 12px 16px; border: 2px solid #ff6b9d; border-radius: 30px; font-size: 16px; outline: none; }
+    #search { 
+      width: 100%; padding: 12px 16px; border: 2px solid #ff6b9d; 
+      border-radius: 30px; font-size: 16px; outline: none; transition: all 0.3s;
+    }
+    #search:focus { border-color: #c44569; transform: scale(1.02); }
 
     .tabs { 
-      display: flex; 
-      background: white; 
-      overflow-x: auto; 
-      padding: 10px 8px; 
-      gap: 8px;
-      position: sticky; 
-      top: 52px; 
-      z-index: 99; 
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex; background: white; overflow-x: auto; padding: 10px 8px; gap: 8px;
+      position: sticky; top: 52px; z-index: 99; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
     }
-    .tabs::-webkit-scrollbar { display: none; }
-
     .tab { 
-      padding: 10px 16px; 
-      border-radius: 30px; 
-      white-space: nowrap; 
-      font-weight: 600; 
-      cursor: pointer; 
-      transition: all 0.3s ease; 
-      flex-shrink: 0;
-      touch-action: manipulation;
+      padding: 10px 16px; border-radius: 30px; white-space: nowrap; font-weight: 600; 
+      cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0;
     }
     .tab.active { 
-      background: #ff6b9d; 
-      color: white; 
-      transform: scale(1.05); 
+      background: #ff6b9d; color: white; transform: scale(1.08); 
+      box-shadow: 0 4px 15px rgba(255,107,157,0.4);
     }
 
     .category { 
-      display: none; 
-      background: white; 
-      margin: 12px; 
-      border-radius: 20px; 
-      overflow: hidden; 
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+      display: none; background: white; margin: 12px; border-radius: 20px; 
+      overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+      animation: categoryPop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .category.active { display: block; }
 
+    @keyframes categoryPop {
+      from { opacity: 0; transform: translateY(40px) scale(0.92); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
     .category-title { 
       background: linear-gradient(135deg, #ff6b9d, #c44569); 
-      color: white; 
-      padding: 16px; 
-      font-size: 22px; 
-      text-align: center; 
+      color: white; padding: 16px; font-size: 22px; text-align: center; 
     }
 
     .item {
@@ -97,6 +89,12 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .item:hover {
+      transform: translateX(15px) scale(1.02);
+      background: #fff0f5;
+      box-shadow: 0 6px 20px rgba(255,107,157,0.2);
     }
 
     .name { flex: 1; font-weight: 500; }
@@ -110,6 +108,11 @@
       border-radius: 25px;
       cursor: pointer;
       font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    button:hover { 
+      transform: scale(1.15) rotate(4deg); 
+      background: #c44569;
     }
 
     .cart-icon {
@@ -117,7 +120,9 @@
       width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center;
       justify-content: center; font-size: 30px; box-shadow: 0 6px 20px rgba(255,107,157,0.5);
       z-index: 1000; cursor: pointer;
+      transition: all 0.3s ease;
     }
+    .cart-icon:hover { transform: scale(1.15) rotate(10deg); }
 
     .modal {
       display: none; position: fixed; top: 0; left: 0;
@@ -126,13 +131,21 @@
     }
     .modal-content {
       background: white; width: 92%; max-width: 420px;
-      border-radius: 20px; padding: 20px; max-height: 85vh; overflow-y: auto;
+      border-radius: 24px; padding: 20px; max-height: 85vh; overflow-y: auto;
+      animation: modalPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes modalPop {
+      from { opacity: 0; transform: scale(0.7) translateY(60px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
 
     .added-toast {
       position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
-      background: #4caf50; color: white; padding: 14px 24px; border-radius: 50px;
-      z-index: 3000; opacity: 0; transition: all 0.4s;
+      background: linear-gradient(135deg, #4caf50, #45a049);
+      color: white; padding: 14px 26px; border-radius: 50px;
+      z-index: 3000; opacity: 0; box-shadow: 0 8px 25px rgba(76,175,80,0.5);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   </style>
 </head>
@@ -267,7 +280,7 @@
     <div class="item"><span class="name">Snickers</span><span class="price">100 грн</span><button onclick="addToCart('Snickers Айс-латте', 100)">Додати</button></div>
   </div>
 
-  <!-- КАВА (нова категорія) -->
+  <!-- КАВА -->
   <div class="category" id="coffee">
     <div class="category-title">☕ Кава</div>
     <div class="item"><span class="name">Американо XL</span><span class="price">60 грн</span><button onclick="addToCart('Американо XL', 60)">Додати</button></div>
@@ -349,7 +362,11 @@
       const toast = document.getElementById('toast');
       toast.textContent = `✅ ${name} додано!`;
       toast.style.opacity = '1';
-      setTimeout(() => toast.style.opacity = '0', 2200);
+      toast.style.transform = 'translate(-50%, 0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translate(-50%, 30px)';
+      }, 2300);
     }
 
     function updateCartCount() {
@@ -414,7 +431,7 @@
       closeCart();
     }
 
-    // Табы
+    // Ініціалізація табів
     document.getElementById('tabs').innerHTML = `
       <div class="tab active" data-tab="popular">🔥 Популярне</div>
       <div class="tab" data-tab="fritur">🍟 Фритюр</div>
@@ -424,8 +441,8 @@
       <div class="tab" data-tab="pizza">🍕 Піца</div>
       <div class="tab" data-tab="milkshakes">🥤 Молочні</div>
       <div class="tab" data-tab="ice_latte">🥛 Айс-латте</div>
-      <div class="tab" data-tab="bubble">🧋 Бабл</div>
       <div class="tab" data-tab="coffee">☕ Кава</div>
+      <div class="tab" data-tab="bubble">🧋 Бабл</div>
       <div class="tab" data-tab="burgers">🍔 Бургери</div>
     `;
 
