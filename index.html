@@ -76,12 +76,6 @@
       transform: translateX(12px);
       background: #fff0f5;
     }
-    .item img {
-      width: 70px;
-      height: 70px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
 
     .name { flex: 1; font-weight: 500; }
     .price { color: #e74c3c; font-weight: 700; margin-right: 10px; white-space: nowrap; }
@@ -159,17 +153,16 @@
   <!-- ПОПУЛЯРНЕ -->
   <div class="category active" id="popular">
     <div class="category-title">🔥 Популярне</div>
-    <div class="item"><span class="name">Крильця Crispy 6 шт.</span><span class="price">200 грн</span><button onclick="addToCart('Крильця Crispy 6 шт.', 200)">Додати</button></div>
+    <div class="item"><span class="name">Крильця Crispy 6 шт</span><span class="price">200 грн</span><button onclick="addToCart('Крильця Crispy 6 шт', 200)">Додати</button></div>
   </div>
 
   <!-- ФРИТЮР -->
   <div class="category" id="fritur">
     <div class="category-title">🍟 Фритюр</div>
     <div class="item"><span class="name">Крильця криспі 6 шт</span><span class="price">200 грн</span><button onclick="addToCart('Крильця криспі 6 шт', 200)">Додати</button></div>
-    <div class="item"><span class="name">Креветка</span><span class="price">290 грн</span><button onclick="addToCart('Креветка', 290)">Додати</button></div>
     <div class="item"><span class="name">Кільця кальмара</span><span class="price">200 грн</span><button onclick="addToCart('Кільця кальмара', 200)">Додати</button></div>
-    <div class="item"><span class="name">Нагетси 9 шт</span><span class="price">140 грн</span><button onclick="addToCart('Нагетси 9 шт', 140)">Додати</button></div>
     <div class="item"><span class="name">Сирні кульки 10 шт</span><span class="price">150 грн</span><button onclick="addToCart('Сирні кульки 10 шт', 150)">Додати</button></div>
+    <div class="item"><span class="name">Нагетси 9 шт</span><span class="price">140 грн</span><button onclick="addToCart('Нагетси 9 шт', 140)">Додати</button></div>
     <div class="item"><span class="name">Картопшка фрі велика</span><span class="price">100 грн</span><button onclick="addToCart('Картопшка фрі велика', 100)">Додати</button></div>
     <div class="item"><span class="name">Цибулеві кільця 8 шт</span><span class="price">100 грн</span><button onclick="addToCart('Цибулеві кільця 8 шт', 100)">Додати</button></div>
     <div class="item"><span class="name">Крильця криспі 3 шт</span><span class="price">100 грн</span><button onclick="addToCart('Крильця криспі 3 шт', 100)">Додати</button></div>
@@ -180,7 +173,7 @@
     <div class="item"><span class="name">Цибулеві кільця 5 шт</span><span class="price">90 грн</span><button onclick="addToCart('Цибулеві кільця 5 шт', 90)">Додати</button></div>
   </div>
 
-  <!-- СУШІ СЕТИ (від дорогих до дешевих) -->
+  <!-- СУШІ СЕТИ -->
   <div class="category" id="sushi_sets">
     <div class="category-title">🍣 Суші-сети</div>
     <div class="item"><span class="name">Жук Весняний 40 шт</span><span class="price">1500 грн</span><button onclick="addToCart('Жук Весняний 40 шт', 1500)">Додати</button></div>
@@ -254,12 +247,36 @@
   <!-- БАБЛ-ЛИМОНАДИ -->
   <div class="category" id="bubble">
     <div class="category-title">🧋 Бабл-лимонади</div>
-    <div class="item"><span class="name">Бабл Лимонад Полуниця</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Полуниця', 100)">Додати</button></div>
-    <div class="item"><span class="name">Бабл Лимонад Малина</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Малина', 100)">Додати</button></div>
-    <div class="item"><span class="name">Бабл Лимонад Ківі</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Ківі', 100)">Додати</button></div>
-    <div class="item"><span class="name">Бабл Лимонад Манго</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Манго', 100)">Додати</button></div>
-    <div class="item"><span class="name">Бабл Лимонад Вишня</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Вишня', 100)">Додати</button></div>
-    <div class="item"><span class="name">Бабл Лимонад Мультифрукт</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Мультифрукт', 100)">Додати</button></div>
+    
+    <div class="item"><span class="name">Бабл Лимонад Полуниця 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Полуниця 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Полуниця 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Полуниця 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Полуниця 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Полуниця 300 мл', 100)">Додати</button></div>
+
+    <div class="item"><span class="name">Бабл Лимонад Малина 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Малина 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Малина 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Малина 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Малина 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Малина 300 мл', 100)">Додати</button></div>
+
+    <div class="item"><span class="name">Бабл Лимонад Ківі 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Ківі 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ківі 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Ківі 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ківі 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Ківі 300 мл', 100)">Додати</button></div>
+
+    <div class="item"><span class="name">Бабл Лимонад Манго 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Манго 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Манго 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Манго 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Манго 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Манго 300 мл', 100)">Додати</button></div>
+
+    <div class="item"><span class="name">Бабл Лимонад Вишня 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Вишня 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Вишня 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Вишня 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Вишня 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Вишня 300 мл', 100)">Додати</button></div>
+
+    <div class="item"><span class="name">Бабл Лимонад Ананас 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Ананас 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ананас 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Ананас 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ананас 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Ананас 300 мл', 100)">Додати</button></div>
+
+    <div class="item"><span class="name">Бабл Лимонад Мультифрукт 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Лимонад Мультифрукт 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Мультифрукт 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Лимонад Мультифрукт 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Мультифрукт 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Лимонад Мультифрукт 300 мл', 100)">Додати</button></div>
+
+    <div class="item"><span class="name">Бабл Латте Карамель 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Латте Карамель 500 мл', 150)">Додати</button></div>
   </div>
 
   <!-- БУРГЕРИ -->
@@ -367,7 +384,7 @@
       closeCart();
     }
 
-    // Табы
+    // Ініціалізація табів
     document.getElementById('tabs').innerHTML = `
       <div class="tab active" data-tab="popular">🔥 Популярне</div>
       <div class="tab" data-tab="fritur">🍟 Фритюр</div>
