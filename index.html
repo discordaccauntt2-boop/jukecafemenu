@@ -8,41 +8,159 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      margin: 0; 
+      background: #f8f1f7; 
+      color: #333; 
+    }
 
-    .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: brightness(0.78) saturate(1.2); }
-    .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.4)); z-index: -1; }
+    .bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.75) saturate(1.15);
+    }
 
-    .hero { height: 440px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; animation: heroFade 2.8s ease forwards; }
-    @keyframes heroFade { from { opacity: 0; transform: scale(0.85) translateY(40px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.4));
+      z-index: -1;
+    }
 
-    .header { background: rgba(255, 107, 157, 0.95); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .hero {
+      height: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      animation: heroFade 2.8s ease forwards;
+    }
+    @keyframes heroFade { 
+      from { opacity: 0; transform: scale(0.85) translateY(50px); } 
+      to { opacity: 1; transform: scale(1) translateY(0); } 
+    }
+
+    .header {
+      background: rgba(255, 107, 157, 0.95); 
+      padding: 14px 16px;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      position: sticky; 
+      top: 0; 
+      z-index: 100;
+    }
+
     .search-container { padding: 12px 16px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     #search { width: 100%; padding: 14px 18px; border: 2px solid #ff6b9d; border-radius: 30px; outline: none; font-size: 16px; }
 
-    .tabs { display: flex; background: white; overflow-x: auto; padding: 12px 8px; gap: 8px; position: sticky; top: 58px; z-index: 99; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-    .tab { padding: 11px 18px; border-radius: 30px; white-space: nowrap; font-weight: 600; cursor: pointer; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); flex-shrink: 0; }
-    .tab.active { background: #ff6b9d; color: white; transform: scale(1.12); box-shadow: 0 6px 20px rgba(255,107,157,0.5); }
+    .tabs {
+      display: flex; 
+      background: white; 
+      overflow-x: auto; 
+      padding: 12px 8px; 
+      gap: 8px;
+      position: sticky; 
+      top: 58px; 
+      z-index: 99; 
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .tab {
+      padding: 11px 18px; 
+      border-radius: 30px; 
+      white-space: nowrap; 
+      font-weight: 600;
+      cursor: pointer; 
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      flex-shrink: 0;
+    }
+    .tab.active {
+      background: #ff6b9d; 
+      color: white; 
+      transform: scale(1.12);
+      box-shadow: 0 6px 20px rgba(255,107,157,0.5);
+    }
 
-    .category { display: none; background: white; margin: 12px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12); animation: categoryPop 0.9s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .category {
+      display: none; 
+      background: white; 
+      margin: 12px; 
+      border-radius: 20px;
+      overflow: hidden; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      animation: categoryPop 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
     .category.active { display: block; }
-    @keyframes categoryPop { from { opacity: 0; transform: translateY(70px) scale(0.82); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
-    .category-title { background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 18px; text-align: center; font-size: 22px; font-weight: 600; }
+    @keyframes categoryPop {
+      from { opacity: 0; transform: translateY(70px) scale(0.82); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
 
-    .item { padding: 16px 18px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 12px; transition: all 0.4s ease; }
-    .item:hover { background: #fff0f5; transform: translateX(18px) scale(1.03); }
+    .category-title {
+      background: linear-gradient(135deg, #ff6b9d, #c44569);
+      color: white; 
+      padding: 18px; 
+      text-align: center; 
+      font-size: 22px; 
+      font-weight: 600;
+    }
+
+    .item {
+      padding: 16px 18px;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.4s ease;
+    }
+    .item:hover {
+      transform: translateX(18px) scale(1.03);
+      background: #fff0f5;
+      box-shadow: 0 12px 30px rgba(255,107,157,0.25);
+    }
+
     .name { flex: 1; font-weight: 500; }
     .price { color: #e74c3c; font-weight: 700; white-space: nowrap; }
 
-    button { background: #ff6b9d; color: white; border: none; padding: 9px 18px; border-radius: 25px; cursor: pointer; font-size: 14px; transition: all 0.4s ease; }
-    button:hover { transform: scale(1.18) rotate(6deg); background: #c44569; }
+    button {
+      background: #ff6b9d;
+      color: white;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.4s ease;
+    }
+    button:hover {
+      transform: scale(1.18) rotate(6deg);
+      background: #c44569;
+    }
 
     .cart-icon {
-      position: fixed; bottom: 25px; right: 25px; background: #ff6b9d; color: white;
-      width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 32px; box-shadow: 0 10px 30px rgba(255,107,157,0.6);
-      z-index: 1000; cursor: pointer;
+      position: fixed; 
+      bottom: 25px; 
+      right: 25px; 
+      background: #ff6b9d; 
+      color: white;
+      width: 70px; 
+      height: 70px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center;
+      justify-content: center; 
+      font-size: 32px; 
+      box-shadow: 0 10px 30px rgba(255,107,157,0.6);
+      z-index: 1000; 
+      cursor: pointer;
     }
     .cart-icon:hover { transform: scale(1.25) rotate(15deg); }
 
@@ -72,10 +190,12 @@
   </div>
 
   <div class="header">
-    <div><strong>Меню</strong></div>
-    <div style="text-align:right; line-height:1.4;">
+    <div>Меню</div>
+    <div class="header-info">
       <strong>вул. Сумський Шлях 104-Б</strong><br>
-      <strong>099 797 09 87</strong> | <strong>068 876 51 17</strong>
+      <strong>099 797 09 87</strong><br>
+      <strong>068 876 51 17</strong><br>
+      10:00 – 22:00
     </div>
   </div>
 
@@ -111,10 +231,12 @@
     <div class="item"><span class="name">Жук Весняний 40 шт</span><span class="price">1500 грн</span><button onclick="addToCart('Жук Весняний 40 шт', 1500)">Додати</button></div>
     <div class="item"><span class="name">Весняний Juke 40 шт</span><span class="price">1500 грн</span><button onclick="addToCart('Весняний Juke 40 шт', 1500)">Додати</button></div>
     <div class="item"><span class="name">Бонсай 48 шт</span><span class="price">1390 грн</span><button onclick="addToCart('Бонсай 48 шт', 1390)">Додати</button></div>
+    <div class="item"><span class="name">Бургер and Ролл</span><span class="price">1200 грн</span><button onclick="addToCart('Бургер and Ролл', 1200)">Додати</button></div>
     <div class="item"><span class="name">Сет Темпура 32 шт</span><span class="price">1000 грн</span><button onclick="addToCart('Сет Темпура 32 шт', 1000)">Додати</button></div>
     <div class="item"><span class="name">Філадельфія Максі 40 шт</span><span class="price">970 грн</span><button onclick="addToCart('Філадельфія Максі 40 шт', 970)">Додати</button></div>
     <div class="item"><span class="name">Сет Запечений 32 шт</span><span class="price">950 грн</span><button onclick="addToCart('Сет Запечений 32 шт', 950)">Додати</button></div>
     <div class="item"><span class="name">Футомак 32 шт</span><span class="price">850 грн</span><button onclick="addToCart('Футомак 32 шт', 850)">Додати</button></div>
+    <div class="item"><span class="name">Філадельфія Міні 24 шт</span><span class="price">680 грн</span><button onclick="addToCart('Філадельфія Міні 24 шт', 680)">Додати</button></div>
     <div class="item"><span class="name">Маки 48 шт</span><span class="price">550 грн</span><button onclick="addToCart('Маки 48 шт', 550)">Додати</button></div>
   </div>
 
@@ -137,20 +259,20 @@
   <!-- Піца (14 позицій) -->
   <div class="category" id="pizza">
     <div class="category-title">🍕 Піца</div>
-    <div class="item"><span class="name">Неаполітана (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Неаполітана', 200)">Додати</button></div>
-    <div class="item"><span class="name">Жульєн (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Жульєн', 200)">Додати</button></div>
-    <div class="item"><span class="name">Пепероні (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Пепероні', 200)">Додати</button></div>
-    <div class="item"><span class="name">Харківська (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Харківська', 200)">Додати</button></div>
-    <div class="item"><span class="name">4 сири (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('4 сири', 200)">Додати</button></div>
-    <div class="item"><span class="name">4 м’яса (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('4 м’яса', 200)">Додати</button></div>
-    <div class="item"><span class="name">Гавайська (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Гавайська', 200)">Додати</button></div>
-    <div class="item"><span class="name">Баварська (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Баварська', 180)">Додати</button></div>
-    <div class="item"><span class="name">Салямі (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Салямі', 180)">Додати</button></div>
-    <div class="item"><span class="name">Фірмова (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Фірмова', 180)">Додати</button></div>
-    <div class="item"><span class="name">Шинка з грибами (товсте)</span><span class="price">180 грн</span><button onclick="addToCart('Шинка з грибами', 180)">Додати</button></div>
-    <div class="item"><span class="name">Курка з Ананасом (товсте)</span><span class="price">180 грн</span><button onclick="addToCart('Курка з Ананасом', 180)">Додати</button></div>
-    <div class="item"><span class="name">Курка з грибами (товсте)</span><span class="price">180 грн</span><button onclick="addToCart('Курка з грибами', 180)">Додати</button></div>
-    <div class="item"><span class="name">Шинка з Куркою (товсте)</span><span class="price">180 грн</span><button onclick="addToCart('Шинка з Куркою', 180)">Додати</button></div>
+    <div class="item"><span class="name">Піца Неаполітана (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Піца Неаполітана (тонке)', 200)">Додати</button></div>
+    <div class="item"><span class="name">Піца Жульєн (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Піца Жульєн (тонке)', 200)">Додати</button></div>
+    <div class="item"><span class="name">Піца Пепероні (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Піца Пепероні (тонке)', 200)">Додати</button></div>
+    <div class="item"><span class="name">Піца Харківська (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Піца Харківська (тонке)', 200)">Додати</button></div>
+    <div class="item"><span class="name">Піца 4 сири (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Піца 4 сири (тонке)', 200)">Додати</button></div>
+    <div class="item"><span class="name">Піца 4 м’яса (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Піца 4 м’яса (тонке)', 200)">Додати</button></div>
+    <div class="item"><span class="name">Піца Гавайська (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Піца Гавайська (тонке)', 200)">Додати</button></div>
+    <div class="item"><span class="name">Піца Баварська (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Піца Баварська (товсте)', 180)">Додати</button></div>
+    <div class="item"><span class="name">Піца Салямі (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Піца Салямі (товсте)', 180)">Додати</button></div>
+    <div class="item"><span class="name">Піца Фірмова (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Піца Фірмова (товсте)', 180)">Додати</button></div>
+    <div class="item"><span class="name">Піца Шинка з грибами (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Піца Шинка з грибами (товсте)', 180)">Додати</button></div>
+    <div class="item"><span class="name">Піца Курка з Ананасом (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Піца Курка з Ананасом (товсте)', 180)">Додати</button></div>
+    <div class="item"><span class="name">Піца Курка з грибами (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Піца Курка з грибами (товсте)', 180)">Додати</button></div>
+    <div class="item"><span class="name">Піца Шинка з Куркою (товсте тісто)</span><span class="price">180 грн</span><button onclick="addToCart('Піца Шинка з Куркою (товсте)', 180)">Додати</button></div>
   </div>
 
   <!-- Молочні коктейлі -->
@@ -185,10 +307,9 @@
     <div class="item"><span class="name">Американо</span><span class="price">50 грн</span><button onclick="addToCart('Американо', 50)">Додати</button></div>
     <div class="item"><span class="name">Допіо</span><span class="price">50 грн</span><button onclick="addToCart('Допіо', 50)">Додати</button></div>
     <div class="item"><span class="name">Еспресо</span><span class="price">40 грн</span><button onclick="addToCart('Еспресо', 40)">Додати</button></div>
-    <div class="item"><span class="name">Какао</span><span class="price">60 грн</span><button onclick="addToCart('Какао', 60)">Додати</button></div>
   </div>
 
-  <!-- Бабл (з розмірами 300/400/500) -->
+  <!-- Бабл (з усіма розмірами) -->
   <div class="category" id="bubble">
     <div class="category-title">🧋 Бабл-лимонади</div>
     <div class="item"><span class="name">Бабл Латте Карамель 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Латте Карамель 500 мл', 150)">Додати</button></div>
@@ -235,6 +356,10 @@
     <div class="item"><span class="name">Персик - Абрикос</span><span class="price">75 грн/л</span><button onclick="addToCart('Сидр Персик-Абрикос', 75)">Додати</button></div>
     <div class="item"><span class="name">Манго - Персик</span><span class="price">75 грн/л</span><button onclick="addToCart('Сидр Манго-Персик', 75)">Додати</button></div>
     <div class="item"><span class="name">Полуниця з вершками</span><span class="price">75 грн/л</span><button onclick="addToCart('Сидр Полуниця з вершками', 75)">Додати</button></div>
+    <div class="item"><span class="name">Порічка - Малина</span><span class="price">75 грн/л</span><button onclick="addToCart('Сидр Порічка-Малина', 75)">Додати</button></div>
+    <div class="item"><span class="name">Смородина</span><span class="price">75 грн/л</span><button onclick="addToCart('Сидр Смородина', 75)">Додати</button></div>
+    <div class="item"><span class="name">Текіла Бум</span><span class="price">75 грн/л</span><button onclick="addToCart('Сидр Текіла Бум', 75)">Додати</button></div>
+    <div class="item"><span class="name">Медуза Ель</span><span class="price">75 грн/л</span><button onclick="addToCart('Сидр Медуза Ель', 75)">Додати</button></div>
   </div>
 
   <div class="cart-icon" onclick="showCart()">🛒 <span id="cart-count">0</span></div>
@@ -299,7 +424,7 @@
       tab.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
+        document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
         document.getElementById(tab.dataset.tab).classList.add('active');
       });
     });
