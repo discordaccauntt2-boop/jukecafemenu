@@ -283,6 +283,17 @@
     <div class="item"><span class="name">Живчик «Груша» сильногазована 2 л</span><span class="price">70 грн</span><button onclick="addToCart('Живчик Груша 2 л', 70)">Додати</button></div>
   </div>
 
+  <!-- Газовані напої -->
+  <div class="category" id="fizzy">
+    <div class="category-title">🥤 Газовані напої</div>
+    <div class="item"><span class="name">Живчик «Лимон»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Лимон', 30)">Додати</button></div>
+    <div class="item"><span class="name">Живчик «Апельсин»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Апельсин', 30)">Додати</button></div>
+    <div class="item"><span class="name">Живчик «Яблуко»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Яблуко', 30)">Додати</button></div>
+    <div class="item"><span class="name">Живчик «Смарт Кола»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Смарт Кола', 30)">Додати</button></div>
+    <div class="item"><span class="name">Живчик «Яблуко» 2 л</span><span class="price">70 грн</span><button onclick="addToCart('Живчик Яблуко 2 л', 70)">Додати</button></div>
+    <div class="item"><span class="name">Rio de Mojito</span><span class="price">37 грн</span><button onclick="addToCart('Rio de Mojito', 37)">Додати</button></div>
+  </div>
+
   <div class="cart-icon" onclick="showCartModal()">🛒 <span id="cart-count">0</span></div>
 
   <!-- Модальне вікно кошика -->
@@ -397,6 +408,7 @@
       <div class="tab" data-tab="beer">🍺 Пиво</div>
       <div class="tab" data-tab="cider">🍎 Сидр</div>
       <div class="tab" data-tab="water">💧 Вода</div>
+      <div class="tab" data-tab="fizzy">🥤 Газовані</div>
     `;
 
     document.querySelectorAll('.tab').forEach(tab => {
