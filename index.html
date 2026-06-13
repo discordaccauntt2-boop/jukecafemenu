@@ -278,6 +278,24 @@
 
   <div class="cart-icon" onclick="showCart()">🛒 <span id="cart-count">0</span></div>
 
+  
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        Кошик
+        <span class="close" onclick="closeCartModal()">×</span>
+      </div>
+      <div id="modal-cart-items" style="padding: 15px; max-height: 60vh; overflow-y: auto;"></div>
+      <div style="padding: 15px; text-align: right; font-weight: 700; border-top: 1px solid #eee;">
+        Разом: <span id="modal-total">0</span> грн
+      </div>
+      <div style="padding: 15px; display: flex; gap: 10px;">
+        <button onclick="closeCartModal()" style="flex:1; background:#999;">Закрити</button>
+        <button onclick="checkoutFromModal()" style="flex:1; background:#ff6b9d;">Замовити в Telegram</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     let cart = [];
 
@@ -302,8 +320,53 @@
       document.getElementById('cart-count').textContent = count;
     }
 
-    function showCart() {
+    function showCartModal() {
       if (cart.length === 0) return alert("Кошик порожній");
+      let html = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const sum = item.price * item.quantity;
+        total += sum;
+        html += `
+          <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid #eee;">
+            <div>
+              <div>${item.name}</div>
+              <div style="color:#e74c3c;">${item.price} грн × ${item.quantity}</div>
+            </div>
+            <div>
+              <button onclick="changeQuantity(${index}, -1)" style="padding:4px 10px;">–</button>
+              <span style="margin:0 10px;">${item.quantity}</span>
+              <button onclick="changeQuantity(${index}, 1)" style="padding:4px 10px;">+</button>
+              <button onclick="removeFromCart(${index})" style="margin-left:10px; background:#e74c3c; color:white; padding:4px 10px;">Видалити</button>
+            </div>
+          </div>`;
+      });
+
+      document.getElementById('modal-cart-items').innerHTML = html;
+      document.getElementById('modal-total').textContent = total;
+      document.getElementById('cartModal').style.display = 'flex';
+    }
+
+    function changeQuantity(index, change) {
+      cart[index].quantity += change;
+      if (cart[index].quantity < 1) cart.splice(index, 1);
+      showCartModal();
+      updateCartCount();
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      showCartModal();
+      updateCartCount();
+    }
+
+    function closeCartModal() {
+      document.getElementById('cartModal').style.display = 'none';
+    }
+
+    function checkoutFromModal() {
+      if (cart.length === 0) return;
       let text = "🛒 Нове замовлення з Juke Cafe\n\n";
       let total = 0;
       cart.forEach(item => {
@@ -315,8 +378,10 @@
       window.open(`https://t.me/marinajuke?text=${encodeURIComponent(text)}`, '_blank');
       cart = [];
       updateCartCount();
+      closeCartModal();
     }
 
+    // Табы
     document.getElementById('tabs').innerHTML = `
       <div class="tab active" data-tab="popular">🔥 Популярне</div>
       <div class="tab" data-tab="fritur">🍟 Фритюр</div>
