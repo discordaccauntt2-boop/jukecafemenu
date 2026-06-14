@@ -170,6 +170,21 @@
     <div class="item"><span class="name">Вино кохання — червоне н/с</span><span class="price">100 грн/л</span><button onclick="addToCart('Вино кохання', 100)">Додати</button></div>
   </div>
 
+  !-- Пиво на розлив -->
+  <div class="category" id="beer">
+    <div class="category-title">🍺 Пиво на розлив</div>
+    <div class="item"><span class="name">Вайсбург Бланш 4,7%</span><span class="price">85 грн/л</span><button onclick="addToCart('Вайсбург Бланш', 85)">Додати</button></div>
+    <div class="item"><span class="name">Вайсбург Дункель 4,7%</span><span class="price">80 грн/л</span><button onclick="addToCart('Вайсбург Дункель', 80)">Додати</button></div>
+    <div class="item"><span class="name">Уманське медове 6,5%</span><span class="price">80 грн/л</span><button onclick="addToCart('Уманське медове', 80)">Додати</button></div>
+    <div class="item"><span class="name">Мюнхенське світле 4,9%</span><span class="price">80 грн/л</span><button onclick="addToCart('Мюнхенське світле', 80)">Додати</button></div>
+    <div class="item"><span class="name">Душа Пивовара 5,2%</span><span class="price">80 грн/л</span><button onclick="addToCart('Душа Пивовара', 80)">Додати</button></div>
+    <div class="item"><span class="name">Зіберт світле (Акція)</span><span class="price">40 грн/л</span><button onclick="addToCart('Зіберт світле', 40)">Додати</button></div>
+    
+    <div class="note">
+      Пиво продається на вагу. Ви можете замовити будь-який об’єм від 0,5 л. Фактична вага при наливі може незначно відрізнятися від замовленого об’єму, тому оплата здійснюється за фактичну вагу налитого пива.
+    </div>
+  </div>
+  
   <!-- Молочні коктейлі -->
   <div class="category" id="milkshakes">
     <div class="category-title">🥤 Молочні коктейлі</div>
@@ -188,33 +203,49 @@
   <!-- Айс-латте -->
   <div class="category" id="ice_latte">
     <div class="category-title">🥛 Айс-латте</div>
-    <div class="item"><span class="name">Шоколадне Печиво</span><span class="price">150 грн</span><button onclick="addToCart('Айс-латте Шоколадне Печиво', 150)">Додати</button></div>
-    <div class="item"><span class="name">Брауні</span><span class="price">150 грн</span><button onclick="addToCart('Айс-латте Брауні', 150)">Додати</button></div>
-    <div class="item"><span class="name">Карамель</span><span class="price">150 грн</span><button onclick="addToCart('Айс-латте Карамель', 150)">Додати</button></div>
+    <div class="item"><span class="name">Шоколадне Печиво</span><span class="price">100 грн</span><button onclick="addToCart('Шоколадне Печиво', 100)">Додати</button></div>
+    <div class="item"><span class="name">Брауні</span><span class="price">100 грн</span><button onclick="addToCart('Брауні', 100)">Додати</button></div>
+    <div class="item"><span class="name">Карамель</span><span class="price">100 грн</span><button onclick="addToCart('Карамель', 100)">Додати</button></div>
+    <div class="item"><span class="name">Irish Cream</span><span class="price">100 грн</span><button onclick="addToCart('Irish Cream', 100)">Додати</button></div>
+    <div class="item"><span class="name">Bounty</span><span class="price">100 грн</span><button onclick="addToCart('Bounty', 100)">Додати</button></div>
+    <div class="item"><span class="name">Snickers</span><span class="price">100 грн</span><button onclick="addToCart('Snickers', 100)">Додати</button></div>
+    <div class="item"><span class="name">Oreo</span><span class="price">100 грн</span><button onclick="addToCart('Oreo', 100)">Додати</button></div>
   </div>
 
   <!-- Кава -->
   <div class="category" id="coffee">
     <div class="category-title">☕ Кава</div>
-    <div class="item"><span class="name">Еспресо</span><span class="price">40 грн</span><button onclick="addToCart('Еспресо', 40)">Додати</button></div>
     <div class="item"><span class="name">Американо</span><span class="price">50 грн</span><button onclick="addToCart('Американо', 50)">Додати</button></div>
     <div class="item"><span class="name">Американо XL</span><span class="price">60 грн</span><button onclick="addToCart('Американо XL', 60)">Додати</button></div>
+    <div class="item"><span class="name">Допіо</span><span class="price">50 грн</span><button onclick="addToCart('Допіо', 50)">Додати</button></div>
+    <div class="item"><span class="name">Еспресо</span><span class="price">40 грн</span><button onclick="addToCart('Еспресо', 40)">Додати</button></div>
+    <div class="item"><span class="name">Еспресо з молоком</span><span class="price">45 грн</span><button onclick="addToCart('Еспресо з молоком', 45)">Додати</button></div>
     <div class="item"><span class="name">Капучино XL</span><span class="price">70 грн</span><button onclick="addToCart('Капучино XL', 70)">Додати</button></div>
     <div class="item"><span class="name">Латте XL</span><span class="price">70 грн</span><button onclick="addToCart('Латте XL', 70)">Додати</button></div>
+    <div class="item"><span class="name">Какао</span><span class="price">60 грн</span><button onclick="addToCart('Какао', 60)">Додати</button></div>
   </div>
 
-  <!-- Бабл-лимонади -->
+ <!-- Бабл (з розмірами 300/400/500 мл) -->
   <div class="category" id="bubble">
     <div class="category-title">🧋 Бабл-лимонади</div>
-    <div class="item"><span class="name">Полуниця 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Полуниця 300 мл', 100)">Додати</button></div>
-    <div class="item"><span class="name">Полуниця 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Полуниця 400 мл', 130)">Додати</button></div>
-    <div class="item"><span class="name">Полуниця 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Полуниця 500 мл', 150)">Додати</button></div>
-    <div class="item"><span class="name">Малина 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Малина', 150)">Додати</button></div>
-    <div class="item"><span class="name">Ківі 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Ківі', 150)">Додати</button></div>
-    <div class="item"><span class="name">Ананас 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Ананас', 150)">Додати</button></div>
-    <div class="item"><span class="name">Вишня 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Вишня', 150)">Додати</button></div>
-    <div class="item"><span class="name">Мультфрукт 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Мультфрукт', 150)">Додати</button></div>
-    <div class="item"><span class="name">Карамель Латте 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Карамель Латте', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Латте Карамель 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Латте Карамель 300 мл', 100)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Латте Карамель 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Латте Карамель 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Латте Карамель 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Латте Карамель 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Полуниця 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Полуниця 300 мл', 100)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Полуниця 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Полуниця 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Полуниця 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Полуниця 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Малина 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Малина 300 мл', 100)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Малина 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Малина 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Малина 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Малина 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ківі 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Ківі 300 мл', 100)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ківі 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Ківі 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ківі 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Ківі 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Манго 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Манго 300 мл', 100)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Манго 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Манго 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Манго 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Манго 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ананас 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Ананас 300 мл', 100)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ананас 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Ананас 400 мл', 130)">Додати</button></div>
+    <div class="item"><span class="name">Бабл Лимонад Ананас 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Ананас 500 мл', 150)">Додати</button></div>
   </div>
 
   <!-- Бургери -->
