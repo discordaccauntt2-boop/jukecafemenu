@@ -8,51 +8,51 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; background: #f8f1f7; }
+    body { font-family: 'Poppins', sans-serif; color: #333; background: #f8f1f7; overflow-x: hidden; }
 
-    .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: brightness(0.75) saturate(1.15); }
-    .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.4)); z-index: -1; }
+    .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: brightness(0.78); }
+    .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)); z-index: -1; }
 
-    .hero { height: 440px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; }
-    .hero h1 { font-size: 58px; font-weight: 700; text-shadow: 0 4px 30px rgba(0,0,0,0.85); }
+    .hero { height: 240px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; }
+    .hero h1 { font-size: 52px; font-weight: 700; text-shadow: 0 4px 25px rgba(0,0,0,0.85); }
+    .hero p { font-size: 19px; margin-top: 6px; }
 
-    .header { background: rgba(255, 107, 157, 0.95); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .header { background: rgba(255, 107, 157, 0.95); padding: 13px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
 
-    .search-container { padding: 12px 16px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    #search { width: 100%; padding: 14px 18px; border: 2px solid #ff6b9d; border-radius: 30px; outline: none; font-size: 16px; }
+    .search-container { padding: 11px 16px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    #search { width: 100%; padding: 13px 18px; border: 2px solid #ff6b9d; border-radius: 30px; outline: none; font-size: 16px; }
 
-    .tabs { display: flex; background: white; overflow-x: auto; padding: 12px 8px; gap: 8px; position: sticky; top: 58px; z-index: 99; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-    .tab { padding: 11px 18px; border-radius: 30px; white-space: nowrap; font-weight: 600; cursor: pointer; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); flex-shrink: 0; }
-    .tab.active { background: #ff6b9d; color: white; transform: scale(1.12); box-shadow: 0 6px 20px rgba(255,107,157,0.5); }
+    .tabs { display: flex; background: white; overflow-x: auto; padding: 11px 8px; gap: 8px; position: sticky; top: 56px; z-index: 99; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .tab { padding: 10px 17px; border-radius: 30px; white-space: nowrap; font-weight: 600; cursor: pointer; transition: all 0.4s; flex-shrink: 0; }
+    .tab.active { background: #ff6b9d; color: white; transform: scale(1.1); }
 
-    .category { display: none; background: white; margin: 12px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12); animation: categoryPop 0.9s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .category { display: none; background: white; margin: 12px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12); animation: pop 0.8s ease; }
     .category.active { display: block; }
-    @keyframes categoryPop { from { opacity: 0; transform: translateY(70px) scale(0.82); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes pop { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
 
-    .category-title { background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 18px; text-align: center; font-size: 22px; font-weight: 600; }
+    .category-title { background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 17px; text-align: center; font-size: 22px; font-weight: 600; }
 
-    .item { padding: 16px 18px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 12px; transition: all 0.4s ease; }
-    .item:hover { background: #fff0f5; transform: translateX(12px); }
+    .item { padding: 16px 18px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 12px; transition: 0.3s; }
+    .item:hover { background: #fff0f5; transform: translateX(10px); }
     .name { flex: 1; font-weight: 500; }
     .price { color: #e74c3c; font-weight: 700; white-space: nowrap; }
 
-    button { background: #ff6b9d; color: white; border: none; padding: 9px 18px; border-radius: 25px; cursor: pointer; font-size: 14px; transition: all 0.4s ease; }
-    button:hover { transform: scale(1.18) rotate(6deg); background: #c44569; }
+    button { background: #ff6b9d; color: white; border: none; padding: 9px 17px; border-radius: 25px; cursor: pointer; font-size: 14px; transition: 0.4s; }
+    button:hover { transform: scale(1.15) rotate(6deg); background: #c44569; }
 
     .cart-icon {
-      position: fixed; bottom: 25px; right: 25px; background: #ff6b9d; color: white;
-      width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 32px; box-shadow: 0 10px 30px rgba(255,107,157,0.6);
+      position: fixed; bottom: 22px; right: 22px; background: #ff6b9d; color: white;
+      width: 68px; height: 68px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 32px; box-shadow: 0 10px 30px rgba(255,107,157,0.65);
       z-index: 1000; cursor: pointer;
     }
 
-    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 2000; align-items: center; justify-content: center; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center; }
     .modal-content { background: white; width: 92%; max-width: 520px; border-radius: 20px; max-height: 90vh; overflow-y: auto; box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
-    .modal-header { padding: 20px; background: #ff6b9d; color: white; text-align: center; font-size: 20px; position: relative; }
-    .close { position: absolute; right: 20px; top: 15px; font-size: 32px; cursor: pointer; line-height: 1; }
+    .modal-header { padding: 20px; background: #ff6b9d; color: white; text-align: center; position: relative; font-size: 20px; }
+    .close { position: absolute; right: 20px; top: 14px; font-size: 32px; cursor: pointer; }
 
-    .instagram-link { font-size: 26px; text-decoration: none; margin-left: 8px; transition: 0.3s; }
-    .instagram-link:hover { transform: scale(1.3); }
+    .instagram-link { font-size: 26px; margin-left: 8px; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -71,7 +71,7 @@
 
   <div class="header">
     <div><strong>Меню</strong></div>
-    <div style="text-align:right; line-height:1.4; display:flex; align-items:center; gap:10px;">
+    <div style="text-align:right; line-height:1.35;">
       <strong>вул. Сумський Шлях 104-Б</strong><br>
       <strong>099 797 09 87</strong> | <strong>068 876 51 17</strong>
       <a href="https://www.instagram.com/jukecafe" target="_blank" class="instagram-link">📸</a>
@@ -94,8 +94,8 @@
   <div class="category" id="fritur">
     <div class="category-title">🍟 Фритюр</div>
     <div class="item"><span class="name">Крильця криспі 6 шт</span><span class="price">200 грн</span><button onclick="addToCart('Крильця криспі 6 шт', 200)">Додати</button></div>
-    <div class="item"><span class="name">Кільця кальмара</span><span class="price">200 грн</span><button onclick="addToCart('Кільця кальмара', 200)">Додати</button></div>
     <div class="item"><span class="name">Крильця криспі 3 шт</span><span class="price">100 грн</span><button onclick="addToCart('Крильця криспі 3 шт', 100)">Додати</button></div>
+    <div class="item"><span class="name">Кільця кальмара</span><span class="price">200 грн</span><button onclick="addToCart('Кільця кальмара', 200)">Додати</button></div>
     <div class="item"><span class="name">Цибулеві кільця 8 шт</span><span class="price">100 грн</span><button onclick="addToCart('Цибулеві кільця 8 шт', 100)">Додати</button></div>
     <div class="item"><span class="name">Сирні палички 5 шт</span><span class="price">100 грн</span><button onclick="addToCart('Сирні палички 5 шт', 100)">Додати</button></div>
     <div class="item"><span class="name">Картопля фрі велика</span><span class="price">100 грн</span><button onclick="addToCart('Картопля фрі велика', 100)">Додати</button></div>
@@ -103,14 +103,14 @@
     <div class="item"><span class="name">Сирні кульки 10 шт</span><span class="price">150 грн</span><button onclick="addToCart('Сирні кульки 10 шт', 150)">Додати</button></div>
   </div>
 
-  <!-- Суші-сети -->
+  <!-- Суши-сети -->
   <div class="category" id="sushi_sets">
     <div class="category-title">🍣 Суші-сети</div>
+    <div class="item"><span class="name">Маки 48 шт</span><span class="price">550 грн</span><button onclick="addToCart('Маки 48 шт', 550)">Додати</button></div>
     <div class="item"><span class="name">Жук Весняний 40 шт</span><span class="price">1500 грн</span><button onclick="addToCart('Жук Весняний 40 шт', 1500)">Додати</button></div>
     <div class="item"><span class="name">Сет Запечений 32 шт</span><span class="price">950 грн</span><button onclick="addToCart('Сет Запечений 32 шт', 950)">Додати</button></div>
     <div class="item"><span class="name">Сет Темпура 32 шт</span><span class="price">1000 грн</span><button onclick="addToCart('Сет Темпура 32 шт', 1000)">Додати</button></div>
     <div class="item"><span class="name">Бургер and Ролл</span><span class="price">1200 грн</span><button onclick="addToCart('Бургер and Ролл', 1200)">Додати</button></div>
-    <div class="item"><span class="name">Маки 48 шт</span><span class="price">550 грн</span><button onclick="addToCart('Маки 48 шт', 550)">Додати</button></div>
   </div>
 
   <!-- Суши Торты -->
@@ -145,52 +145,27 @@
     <div class="item"><span class="name">Жульєн (тонке тісто)</span><span class="price">200 грн</span><button onclick="addToCart('Жульєн', 200)">Додати</button></div>
   </div>
 
-  <!-- Соуси -->
-  <div class="category" id="sauces">
-    <div class="category-title">🥫 Соуси (20 грн)</div>
-    <div class="item"><span class="name">Карі</span><span class="price">20 грн</span><button onclick="addToCart('Соус Карі', 20)">Додати</button></div>
-    <div class="item"><span class="name">Майонез</span><span class="price">20 грн</span><button onclick="addToCart('Соус Майонез', 20)">Додати</button></div>
-    <div class="item"><span class="name">Тартар</span><span class="price">20 грн</span><button onclick="addToCart('Соус Тартар', 20)">Додати</button></div>
-    <div class="item"><span class="name">Брусничний</span><span class="price">20 грн</span><button onclick="addToCart('Соус Брусничний', 20)">Додати</button></div>
-    <div class="item"><span class="name">Французький з гірчицею</span><span class="price">20 грн</span><button onclick="addToCart('Соус Французький з гірчицею', 20)">Додати</button></div>
-    <div class="item"><span class="name">Барбекю</span><span class="price">20 грн</span><button onclick="addToCart('Соус Барбекю', 20)">Додати</button></div>
-    <div class="item"><span class="name">Часниковий</span><span class="price">20 грн</span><button onclick="addToCart('Соус Часниковий', 20)">Додати</button></div>
-    <div class="item"><span class="name">Кетчуп</span><span class="price">20 грн</span><button onclick="addToCart('Соус Кетчуп', 20)">Додати</button></div>
-    <div class="item"><span class="name">Сирний</span><span class="price">20 грн</span><button onclick="addToCart('Соус Сирний', 20)">Додати</button></div>
-    <div class="item"><span class="name">Кисло-солодкий</span><span class="price">20 грн</span><button onclick="addToCart('Соус Кисло-солодкий', 20)">Додати</button></div>
-  </div>
-
-  <!-- Вино -->
-  <div class="category" id="wine">
-    <div class="category-title">🍷 Вино (100 грн/л)</div>
-    <div class="item"><span class="name">Шардоне — біле сухе</span><span class="price">100 грн/л</span><button onclick="addToCart('Шардоне', 100)">Додати</button></div>
-    <div class="item"><span class="name">Біла орхідея — біле н/с</span><span class="price">100 грн/л</span><button onclick="addToCart('Біла орхідея', 100)">Додати</button></div>
-    <div class="item"><span class="name">Каберне — червоне сухе</span><span class="price">100 грн/л</span><button onclick="addToCart('Каберне', 100)">Додати</button></div>
-    <div class="item"><span class="name">Дамський каприз — червоне н/с</span><span class="price">100 грн/л</span><button onclick="addToCart('Дамський каприз', 100)">Додати</button></div>
-    <div class="item"><span class="name">Вино кохання — червоне н/с</span><span class="price">100 грн/л</span><button onclick="addToCart('Вино кохання', 100)">Додати</button></div>
-  </div>
-
   <!-- Молочні коктейлі -->
   <div class="category" id="milkshakes">
     <div class="category-title">🥤 Молочні коктейлі</div>
-    <div class="item"><span class="name">Шоколад</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Шоколад', 150)">Додати</button></div>
-    <div class="item"><span class="name">Фісташка</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Фісташка', 150)">Додати</button></div>
-    <div class="item"><span class="name">Солона карамель</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Солона карамель', 150)">Додати</button></div>
-    <div class="item"><span class="name">Полуниця</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Полуниця', 150)">Додати</button></div>
-    <div class="item"><span class="name">Персик</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Персик', 150)">Додати</button></div>
-    <div class="item"><span class="name">Маракуя</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Маракуя', 150)">Додати</button></div>
-    <div class="item"><span class="name">Манго</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Манго', 150)">Додати</button></div>
-    <div class="item"><span class="name">Малина</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Малина', 150)">Додати</button></div>
-    <div class="item"><span class="name">Лісові ягоди</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Лісові ягоди', 150)">Додати</button></div>
-    <div class="item"><span class="name">Карамель</span><span class="price">150 грн</span><button onclick="addToCart('Молочний коктейль Карамель', 150)">Додати</button></div>
+    <div class="item"><span class="name">Шоколад</span><span class="price">150 грн</span><button onclick="addToCart('Шоколад', 150)">Додати</button></div>
+    <div class="item"><span class="name">Фісташка</span><span class="price">150 грн</span><button onclick="addToCart('Фісташка', 150)">Додати</button></div>
+    <div class="item"><span class="name">Солона карамель</span><span class="price">150 грн</span><button onclick="addToCart('Солона карамель', 150)">Додати</button></div>
+    <div class="item"><span class="name">Полуниця</span><span class="price">150 грн</span><button onclick="addToCart('Полуниця', 150)">Додати</button></div>
+    <div class="item"><span class="name">Персик</span><span class="price">150 грн</span><button onclick="addToCart('Персик', 150)">Додати</button></div>
+    <div class="item"><span class="name">Маракуя</span><span class="price">150 грн</span><button onclick="addToCart('Маракуя', 150)">Додати</button></div>
+    <div class="item"><span class="name">Манго</span><span class="price">150 грн</span><button onclick="addToCart('Манго', 150)">Додати</button></div>
+    <div class="item"><span class="name">Малина</span><span class="price">150 грн</span><button onclick="addToCart('Малина', 150)">Додати</button></div>
+    <div class="item"><span class="name">Лісові ягоди</span><span class="price">150 грн</span><button onclick="addToCart('Лісові ягоди', 150)">Додати</button></div>
+    <div class="item"><span class="name">Карамель</span><span class="price">150 грн</span><button onclick="addToCart('Карамель', 150)">Додати</button></div>
   </div>
 
   <!-- Айс-латте -->
   <div class="category" id="ice_latte">
     <div class="category-title">🥛 Айс-латте</div>
-    <div class="item"><span class="name">Шоколадне Печиво</span><span class="price">150 грн</span><button onclick="addToCart('Айс-латте Шоколадне Печиво', 150)">Додати</button></div>
-    <div class="item"><span class="name">Брауні</span><span class="price">150 грн</span><button onclick="addToCart('Айс-латте Брауні', 150)">Додати</button></div>
-    <div class="item"><span class="name">Карамель</span><span class="price">150 грн</span><button onclick="addToCart('Айс-латте Карамель', 150)">Додати</button></div>
+    <div class="item"><span class="name">Шоколадне Печиво</span><span class="price">150 грн</span><button onclick="addToCart('Шоколадне Печиво', 150)">Додати</button></div>
+    <div class="item"><span class="name">Брауні</span><span class="price">150 грн</span><button onclick="addToCart('Брауні', 150)">Додати</button></div>
+    <div class="item"><span class="name">Карамель</span><span class="price">150 грн</span><button onclick="addToCart('Карамель', 150)">Додати</button></div>
   </div>
 
   <!-- Кава -->
@@ -201,16 +176,18 @@
     <div class="item"><span class="name">Американо XL</span><span class="price">60 грн</span><button onclick="addToCart('Американо XL', 60)">Додати</button></div>
     <div class="item"><span class="name">Капучино XL</span><span class="price">70 грн</span><button onclick="addToCart('Капучино XL', 70)">Додати</button></div>
     <div class="item"><span class="name">Латте XL</span><span class="price">70 грн</span><button onclick="addToCart('Латте XL', 70)">Додати</button></div>
+    <div class="item"><span class="name">Какао</span><span class="price">60 грн</span><button onclick="addToCart('Какао', 60)">Додати</button></div>
   </div>
 
   <!-- Бабл-лимонади -->
   <div class="category" id="bubble">
     <div class="category-title">🧋 Бабл-лимонади</div>
-    <div class="item"><span class="name">Полуниця 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Полуниця 300 мл', 100)">Додати</button></div>
-    <div class="item"><span class="name">Полуниця 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Полуниця 400 мл', 130)">Додати</button></div>
-    <div class="item"><span class="name">Полуниця 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Полуниця 500 мл', 150)">Додати</button></div>
+    <div class="item"><span class="name">Полуниця 300 мл</span><span class="price">100 грн</span><button onclick="addToCart('Бабл Полуниця 300', 100)">Додати</button></div>
+    <div class="item"><span class="name">Полуниця 400 мл</span><span class="price">130 грн</span><button onclick="addToCart('Бабл Полуниця 400', 130)">Додати</button></div>
+    <div class="item"><span class="name">Полуниця 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Полуниця 500', 150)">Додати</button></div>
     <div class="item"><span class="name">Малина 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Малина', 150)">Додати</button></div>
     <div class="item"><span class="name">Ківі 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Ківі', 150)">Додати</button></div>
+    <div class="item"><span class="name">Манго 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Манго', 150)">Додати</button></div>
     <div class="item"><span class="name">Ананас 300/400/500 мл</span><span class="price">100/130/150 грн</span><button onclick="addToCart('Бабл Ананас', 150)">Додати</button></div>
     <div class="item"><span class="name">Карамель Латте 500 мл</span><span class="price">150 грн</span><button onclick="addToCart('Бабл Карамель Латте', 150)">Додати</button></div>
   </div>
@@ -225,55 +202,43 @@
     <div class="item"><span class="name">Black BBQ</span><span class="price">250 грн</span><button onclick="addToCart('Black BBQ', 250)">Додати</button></div>
   </div>
 
-  <!-- Вода -->
-  <div class="category" id="water">
-    <div class="category-title">💧 Вода</div>
-    <div class="item"><span class="name">Оболонська негазована 0,5 л</span><span class="price">25 грн</span><button onclick="addToCart('Оболонська негазована 0,5 л', 25)">Додати</button></div>
-    <div class="item"><span class="name">Оболонська сильногазована 0,5 л</span><span class="price">25 грн</span><button onclick="addToCart('Оболонська сильногазована 0,5 л', 25)">Додати</button></div>
-    <div class="item"><span class="name">Оболонська негазована 1 л</span><span class="price">35 грн</span><button onclick="addToCart('Оболонська негазована 1 л', 35)">Додати</button></div>
-    <div class="item"><span class="name">Оболонська газована 1 л</span><span class="price">35 грн</span><button onclick="addToCart('Оболонська газована 1 л', 35)">Додати</button></div>
-    <div class="item"><span class="name">Оболонська 2 л</span><span class="price">40 грн</span><button onclick="addToCart('Оболонська 2 л', 40)">Додати</button></div>
-    <div class="item"><span class="name">Оболонська негазована 2 л</span><span class="price">40 грн</span><button onclick="addToCart('Оболонська негазована 2 л', 40)">Додати</button></div>
+  <!-- Соуси -->
+  <div class="category" id="sauces">
+    <div class="category-title">🥫 Соуси (20 грн)</div>
+    <div class="item"><span class="name">Карі</span><span class="price">20 грн</span><button onclick="addToCart('Соус Карі', 20)">Додати</button></div>
+    <div class="item"><span class="name">Майонез</span><span class="price">20 грн</span><button onclick="addToCart('Соус Майонез', 20)">Додати</button></div>
+    <div class="item"><span class="name">Тартар</span><span class="price">20 грн</span><button onclick="addToCart('Соус Тартар', 20)">Додати</button></div>
+    <div class="item"><span class="name">Барбекю</span><span class="price">20 грн</span><button onclick="addToCart('Соус Барбекю', 20)">Додати</button></div>
+    <div class="item"><span class="name">Часниковий</span><span class="price">20 грн</span><button onclick="addToCart('Соус Часниковий', 20)">Додати</button></div>
+    <div class="item"><span class="name">Кетчуп</span><span class="price">20 грн</span><button onclick="addToCart('Соус Кетчуп', 20)">Додати</button></div>
+    <div class="item"><span class="name">Сирний</span><span class="price">20 грн</span><button onclick="addToCart('Соус Сирний', 20)">Додати</button></div>
   </div>
 
-  <!-- Газовані напої -->
-  <div class="category" id="fizzy">
-    <div class="category-title">🥤 Газовані напої</div>
-    <div class="item"><span class="name">Живчик «Лимон»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Лимон', 30)">Додати</button></div>
-    <div class="item"><span class="name">Живчик «Апельсин»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Апельсин', 30)">Додати</button></div>
-    <div class="item"><span class="name">Живчик «Яблуко»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Яблуко', 30)">Додати</button></div>
-    <div class="item"><span class="name">Живчик «Смарт Кола»</span><span class="price">30 грн</span><button onclick="addToCart('Живчик Смарт Кола', 30)">Додати</button></div>
-    <div class="item"><span class="name">Rio de Mojito</span><span class="price">37 грн</span><button onclick="addToCart('Rio de Mojito', 37)">Додати</button></div>
+  <!-- Вино -->
+  <div class="category" id="wine">
+    <div class="category-title">🍷 Вино (100 грн/л)</div>
+    <div class="item"><span class="name">Шардоне — біле сухе</span><span class="price">100 грн/л</span><button onclick="addToCart('Шардоне', 100)">Додати</button></div>
+    <div class="item"><span class="name">Біла орхідея — біле н/с</span><span class="price">100 грн/л</span><button onclick="addToCart('Біла орхідея', 100)">Додати</button></div>
+    <div class="item"><span class="name">Каберне — червоне сухе</span><span class="price">100 грн/л</span><button onclick="addToCart('Каберне', 100)">Додати</button></div>
+    <div class="item"><span class="name">Дамський каприз — червоне н/с</span><span class="price">100 грн/л</span><button onclick="addToCart('Дамський каприз', 100)">Додати</button></div>
+    <div class="item"><span class="name">Вино кохання — червоне н/с</span><span class="price">100 грн/л</span><button onclick="addToCart('Вино кохання', 100)">Додати</button></div>
   </div>
 
-  <!-- Енергетики -->
-  <div class="category" id="energy">
-    <div class="category-title">⚡ Енергетичні напої</div>
-    <div class="item"><span class="name">Джетт «Ківі-Яблуко»</span><span class="price">35 грн</span><button onclick="addToCart('Джетт Ківі-Яблуко', 35)">Додати</button></div>
-    <div class="item"><span class="name">Джетт «Манго-Апельсин»</span><span class="price">35 грн</span><button onclick="addToCart('Джетт Манго-Апельсин', 35)">Додати</button></div>
-    <div class="item"><span class="name">Чіт Код Charge «Вишня»</span><span class="price">35 грн</span><button onclick="addToCart('Чіт Код Charge Вишня', 35)">Додати</button></div>
-    <div class="item"><span class="name">Чіт Код Exotic</span><span class="price">35 грн</span><button onclick="addToCart('Чіт Код Exotic', 35)">Додати</button></div>
-    <div class="item"><span class="name">Бронкс</span><span class="price">35 грн</span><button onclick="addToCart('Бронкс', 35)">Додати</button></div>
-    <div class="item"><span class="name">Бронкс «Гранат»</span><span class="price">35 грн</span><button onclick="addToCart('Бронкс Гранат', 35)">Додати</button></div>
-    <div class="item"><span class="name">Бронкс «Ягоди»</span><span class="price">35 грн</span><button onclick="addToCart('Бронкс Ягоди', 35)">Додати</button></div>
-  </div>
-
-  <!-- Пиво -->
+  <!-- Пиво на розлив -->
   <div class="category" id="beer">
     <div class="category-title">🍺 Пиво на розлив</div>
     <div class="item"><span class="name">Душа Пивовара 5,2%</span><span class="price">80 грн/л</span><button onclick="addToCart('Душа Пивовара', 80)">Додати</button></div>
     <div class="item"><span class="name">Мюнхенське 4,9%</span><span class="price">80 грн/л</span><button onclick="addToCart('Мюнхенське', 80)">Додати</button></div>
     <div class="item"><span class="name">Вайсбург Бланш 4,7%</span><span class="price">85 грн/л</span><button onclick="addToCart('Вайсбург Бланш', 85)">Додати</button></div>
-    <div class="item"><span class="name">Віденське Умань 4,5%</span><span class="price">80 грн/л</span><button onclick="addToCart('Віденське Умань', 80)">Додати</button></div>
     <div class="item"><span class="name">Вайсбург Дункель 4,7%</span><span class="price">80 грн/л</span><button onclick="addToCart('Вайсбург Дункель', 80)">Додати</button></div>
   </div>
 
-  <!-- Безалкогольне пиво 0.0 -->
+  <!-- Безалкогольне пиво -->
   <div class="category" id="nonalc_beer">
     <div class="category-title">🍺 Безалкогольне пиво 0.0</div>
-    <div class="item"><span class="name">Zibert 0.0 «Грейпфрут»</span><span class="price">50 грн</span><button onclick="addToCart('Zibert 0.0 Грейпфрут', 50)">Додати</button></div>
-    <div class="item"><span class="name">Zibert Bavarske 0.0</span><span class="price">50 грн</span><button onclick="addToCart('Zibert Bavarske 0.0', 50)">Додати</button></div>
-    <div class="item"><span class="name">Haik Zero 0.0</span><span class="price">52 грн</span><button onclick="addToCart('Haik Zero 0.0', 52)">Додати</button></div>
+    <div class="item"><span class="name">Zibert 0.0 «Грейпфрут»</span><span class="price">50 грн</span><button onclick="addToCart('Zibert Грейпфрут', 50)">Додати</button></div>
+    <div class="item"><span class="name">Zibert Bavarske 0.0</span><span class="price">50 грн</span><button onclick="addToCart('Zibert Bavarske', 50)">Додати</button></div>
+    <div class="item"><span class="name">Haik Zero 0.0</span><span class="price">52 грн</span><button onclick="addToCart('Haik Zero', 52)">Додати</button></div>
     <div class="item"><span class="name">Світле «0»</span><span class="price">50 грн</span><button onclick="addToCart('Світле 0', 50)">Додати</button></div>
     <div class="item"><span class="name">GO + Вишня</span><span class="price">50 грн</span><button onclick="addToCart('GO + Вишня', 50)">Додати</button></div>
   </div>
@@ -325,7 +290,7 @@
           <div>${sum} грн 
             <button onclick="changeQuantity(${index}, -1)">–</button>
             <button onclick="changeQuantity(${index}, 1)">+</button>
-            <button onclick="removeFromCart(${index})" style="background:#e74c3c;color:white;">Видалити</button>
+            <button onclick="removeFromCart(${index})" style="background:#e74c3c;color:white;">×</button>
           </div>
         </div>`;
       });
@@ -367,7 +332,7 @@
       closeCartModal();
     }
 
-    // Повний список табів
+    // Табы
     document.getElementById('tabs').innerHTML = `
       <div class="tab active" data-tab="popular">🔥 Популярне</div>
       <div class="tab" data-tab="fritur">🍟 Фритюр</div>
@@ -383,7 +348,7 @@
       <div class="tab" data-tab="sauces">🥫 Соуси</div>
       <div class="tab" data-tab="wine">🍷 Вино</div>
       <div class="tab" data-tab="beer">🍺 Пиво</div>
-      <div class="tab" data-tab="nonalc_beer">🍺 Безалкогольне 0.0</div>
+      <div class="tab" data-tab="nonalc_beer">🍺 0.0 Пиво</div>
     `;
 
     document.querySelectorAll('.tab').forEach(tab => {
@@ -397,7 +362,10 @@
 
     function searchMenu() {
       const term = document.getElementById('search').value.toLowerCase();
-      console.log('Пошук:', term);
+      document.querySelectorAll('.item').forEach(item => {
+        const name = item.querySelector('.name').textContent.toLowerCase();
+        item.style.display = name.includes(term) ? '' : 'none';
+      });
     }
   </script>
 </body>
